@@ -34,7 +34,7 @@ export function SignupForm() {
 
       const data = await response.json();
       
-      Cookies.set("email", email, { expires: 1 }); 
+      Cookies.set("email", email, { expires: 1 }); // shouldn't jwt would have been used one can easily chnage cookie and login in the name of other user
       router.push("/blog");
     } catch (error) {
       setError(error.message);
